@@ -32,4 +32,18 @@ Number | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 
 
 ---------
+## Working
+1. Created a function ~featureVectorCreator()~ that takes directory path and filename as parameters.
+⋅⋅* It reads all the images one by one, <br/>
+⋅⋅* Applies Fourier Transform (DFT), 
+⋅⋅* Extract DFT's result which is stored in first channel, flattens it into 1-D array (Feature Vector of a Single Image) <br/>
+⋅⋅* Appends Label to the 1-D Array 
+⋅⋅* Stores feature vectors of all the images in a .csv File.
 
+2. Extracted features for Training Data & Testing Data using above function
+3. Train KNN classifier using our trainingvector.csv
+4. Test classifer by making predictions on our testing data.
+5. Check accuracy using accuracy_score (sklearn)
+
+## Results
+Accuracy = 82.04% ( when n_neighbors = 3)
