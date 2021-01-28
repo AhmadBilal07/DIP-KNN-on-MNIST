@@ -42,13 +42,15 @@ Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200
 + Stores feature vectors of all the images in a .csv File.
 
 2. Extracted features for Training Data & Testing Data using above function
-3. Train KNN classifier using our trainingvector.csv
+3. Train Sklearn's KNN classifier using our trainingvector.csv
 4. Test classifer by making predictions on our testing data.
 5. Check accuracy using accuracy_score (sklearn)
 
 ## Results
+Accuracy = 81.74% ( when n_neighbors = 1)
 Accuracy = 82.04% ( when n_neighbors = 3)
-
+Accuracy = 82.79% ( when n_neighbors = 5)
+Accuracy = 82.94% ( when n_neighbors = 7)
 ---------
 ## Usage
 1. Clone Repository
