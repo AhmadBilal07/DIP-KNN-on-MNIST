@@ -47,10 +47,7 @@ Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200
 5. Check accuracy using Sklearn's accuracy_score 
 
 ## Results
- Accuracy = 81.74%  when n_neighbors = 1 <br/>
- Accuracy = 82.04%  when n_neighbors = 3 <br/>
- Accuracy = 82.79%  when n_neighbors = 5 <br/>
- Accuracy = 82.94%  when n_neighbors = 7 <br/>
+ Accuracy = 81.74%  when n_neighbors = 1 
 ---------
 ## Usage
 1. Clone Repository
