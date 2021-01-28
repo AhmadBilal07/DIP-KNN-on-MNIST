@@ -19,7 +19,7 @@ Images | 980 | 1135 | 1032 | 1010 | 982 | 892 | 958 | 1028 | 974 | 1009
 
 
 ## Sample Data
-I took a small sample from the original dataset by selecting first 500 images from each character from training folder & similarly 200 from testing folder for training and testing classifier respectively. i.e.
+I took a small sample from the original dataset by selecting first 500 images of each character from training folder & similarly 200 from testing folder for training and testing classifier respectively. i.e.
 
 ### Training
 Character | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
