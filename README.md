@@ -53,7 +53,7 @@ Accuracy = 82.04% ( when n_neighbors = 3)
 ## Usage
 1. Clone Repository
 2. Download Dataset
-3. Update Path Variables
+3. Update Training & Testing Path Variables
 4. Prepare Training Vector by sending Training Directory Path to Function
 5. Repeat process for Testing Data
 6. Finally execute the classifier 
