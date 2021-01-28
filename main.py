@@ -17,7 +17,6 @@ testingDirectory = 'testing/'
 def featureVectorCreator(path,name):
 
 
-    data = []
     loc = os.listdir(path)
     for i in loc:
 
@@ -31,25 +30,18 @@ def featureVectorCreator(path,name):
         for img in images:
 
             dft = cv.dft(np.float32(img), flags=cv.DFT_COMPLEX_OUTPUT)
-            dft_shift = np.fft.fftshift(dft)
-            magnitude_spectrum = 20 * np.log(cv.magnitude(dft_shift[:, :, 0], dft_shift[:, :, 1]))
-            magnitude_spectrum = np.around(magnitude_spectrum, decimals=4)
-            if np.any(np.isnan(magnitude_spectrum)):
-                print("error")
-            features = magnitude_spectrum.flatten()
+            realDft,imaginaryDft = cv.split(dft)
+            features = realDft.flatten()
             features = np.insert(features, 0, i, axis=0)
+            with open(name + '.csv', 'a') as record_append:
+                np.savetxt(record_append, np.asarray([features]), delimiter=',')
 
-            data.append(features)
-
-    DF = pd.DataFrame(data)
-    # save the dataframe as a csv file
-    DF.to_csv(name + ".csv",index=False)
 
 
 
 if __name__ == '__main__':
-    # featureVectorCreator(trainingDirectory,"TrainingVector")
-    # featureVectorCreator(testingDirectory, "TestingVector")
+    #featureVectorCreator(trainingDirectory,"TrainingVector")
+    #featureVectorCreator(testingDirectory, "TestingVector")
 
 
     trainFileName = "TrainingVector.csv"
@@ -58,7 +50,7 @@ if __name__ == '__main__':
     trainX = trainData[1:,1:]  # create tranining data matix
     trainY=trainData[1:,0] # create labels array
     print("Training Classifier")
-    classifier = KNeighborsClassifier(n_neighbors=15)
+    classifier = KNeighborsClassifier(n_neighbors=3)
     classifier.fit(trainX, trainY)
 
     # read test data
