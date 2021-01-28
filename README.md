@@ -35,11 +35,11 @@ Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200
 ## Working
 1. Created a function ~featureVectorCreator(path,name)~ that takes directory path and filename as parameters.
 
-... It reads all the images one by one, <br/>
-... Applies Fourier Transform (DFT), 
-... Extract DFT's result which is stored in first channel, flattens it into 1-D array (Feature Vector of a Single Image) <br/>
-... Appends Label to the 1-D Array 
-... Stores feature vectors of all the images in a .csv File.
+...It reads all the images one by one, <br/>
+...Applies Fourier Transform (DFT), 
+...Extract DFT's result which is stored in first channel, flattens it into 1-D array (Feature Vector of a Single Image) <br/>
+...Appends Label to the 1-D Array 
+...Stores feature vectors of all the images in a .csv File.
 
 2. Extracted features for Training Data & Testing Data using above function
 3. Train KNN classifier using our trainingvector.csv
