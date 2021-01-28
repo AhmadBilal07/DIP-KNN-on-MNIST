@@ -45,9 +45,6 @@ Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200
 3. Train Sklearn's KNN classifier using our trainingvector.csv
 4. Test classifer by making predictions on our testing data.
 5. Check accuracy using Sklearn's accuracy_score 
-
-## Results
- Accuracy = 81.74%  when n_neighbors = 1 
 ---------
 ## Usage
 1. Clone Repository
