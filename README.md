@@ -31,21 +31,28 @@ Number | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 --- | --- | --- | --- |--- |--- |--- |--- |--- |--- |---
 Images | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 | 200 
 
----------
+---
 ## Working
 1. Created a function *featureVectorCreator(path,name)* that takes directory path and filename as parameters.
 
-+ It reads all the images one by one,
-+ Applies Fourier Transform (DFT), 
-+ Extract DFT's result which is stored in first channel, flattens it into 1-D array (Feature Vector of a Single Image)
-+ Appends Label to the 1-D Array 
-+ Stores feature vectors of all the images in a .csv File.
+- + It reads all the images one by one,
+- + Applies Fourier Transform (DFT), 
+- + Extract DFT's result which is stored in first channel, flattens it into 1-D array (Feature Vector of a Single Image)
+- + Appends Label to the 1-D Array 
+- + Stores feature vectors of all the images in a .csv File.
 
 2. Extracted features for Training Data & Testing Data using above function
 3. Train Sklearn's KNN classifier using our trainingvector.csv
 4. Test classifer by making predictions on our testing data.
 5. Check accuracy using Sklearn's accuracy_score 
----------
+
+## Results
+ Accuracy = 81.74%  when n_neighbors = 1 <br/>
+ Accuracy = 82.04%  when n_neighbors = 3 <br/>
+ Accuracy = 82.79%  when n_neighbors = 5 <br/>
+ Accuracy = 82.94%  when n_neighbors = 7 <br/>
+---
+
 ## Usage
 1. Clone Repository
 2. Download Dataset
